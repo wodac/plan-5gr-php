@@ -1,0 +1,16 @@
+{
+  "short_name": "Plan",
+  "name": "Plan zajęć",
+  "icons": [
+    {
+      "src": "/plan/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/plan/?source=pwa",
+  "background_color": "#aaaaaa",
+  "display": "standalone",
+  "scope": "/plan/",
+  "theme_color": "#343a40"
+}

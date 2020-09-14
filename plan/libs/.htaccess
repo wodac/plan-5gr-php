@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteBase /plan/libs/
+
+RewriteRule ^all.js$ all.php?js [L]
+RewriteRule ^all.css$ all.php?css [L]
+

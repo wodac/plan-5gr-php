@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteBase /plan/templates/
+
+RewriteRule ^t.js$ templates.php [L]

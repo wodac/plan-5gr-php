@@ -1,0 +1,208 @@
+body {    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    display: flex;
+}
+body > .main-container {
+    overflow-y: auto;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+.fc-event, .fc-list-item {
+    color: black;
+}
+.fa.icon {
+    text-align: center;
+}
+.fc-event.exams {
+    border: solid 2px red!important;
+}
+.fc-list-item.exams {
+    background-color: rgba(255,0,0,0.2);
+}
+tr.fc-list-item.lecture {
+    background-color: #ececec;
+    color: #6d6d6d;
+}
+tr.fc-list-item.uncertain {
+    font-style: oblique;
+    color: #777;
+}
+#calendar.hideLectures tr.fc-list-item.lecture, 
+#calendar.hideLectures a.fc-event.lecture {
+    display: none;
+}
+a.fc-event.lecture {
+    border-color: gray!important;
+    border-style: dashed;
+    border-width: 2px;
+    background-blend-mode: lighten;
+    opacity: 0.9;
+    background-image: linear-gradient(-45deg, white, transparent);
+}
+a.fc-event.uncertain {
+    font-style: oblique;
+    opacity: 0.5;
+}
+.fc-event .event-info {
+    font-size: 0.8em;
+    padding: 0.2em;
+    white-space: normal;
+}
+.fc-list-table .event-info .row {
+    padding-left: 0.5rem;
+}
+tr.event-info .location-link {
+    width: 1em;
+    height: 1em;
+    padding: 0.2em;
+    border-radius: 0.7em;
+    border: solid 1px;
+    border-color: transparent;
+}
+tr.event-info .location-link:hover, tr.event-info .location-link:active {
+    text-decoration: none!important;    
+    border-color: #00cccc;
+    color: #00cccc;
+}
+a.fa.fa-external-link-alt.float-right:hover {
+    text-decoration: none;
+    color: #007bff;
+}
+a.fa.fa-external-link-alt.float-right {
+    color: black;
+}
+.event-links a {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 78vw;
+    display: block;
+    overflow: hidden;
+}
+.popover-body {
+    padding: 0!important;
+    overflow: auto;
+    max-height: 65vh!important;
+}
+.popover-body .location-link {
+    color: #575757;
+}
+.popover-body .location-link:hover, .popover-body .location-link:active {
+    text-decoration: none!important;    
+    color: #1e65ba;
+}
+.event-spacer {
+    width: 100%;
+    height: 0.5rem;
+}
+.fc-list-empty-wrap2 {
+    position: inherit;
+}
+table.fc-list-table.table {
+    margin: 0;
+}
+.copy.input-group-append {
+    cursor: pointer;
+}
+.to-transform {
+	transition: transform;
+	transition-duration: 0.4s;
+}
+.swiped-left {
+	transform: translate(-30px, 0);
+	-webkit-transform:translate(-30px,0); 
+	-moz-transform: translate(-30px,0);
+}
+.swiped-right {
+	transform: translate(30px, 0);
+	-webkit-transform:translate(30px,0); 
+	-moz-transform: translate(30px,0);
+}
+.bg-dark.nav.navbar a {
+    color: white;
+    transition: transform 0.5s;
+}
+.bg-dark.nav.navbar a:hover {
+    text-decoration: none;
+}
+.bg-dark.nav.navbar a.fa-cog:hover {
+    transform: rotate(45deg);
+}
+.bg-dark.nav.navbar a.fa-sync.nav-link.rotating {
+    animation-duration: 1s;
+    animation-name: rotating;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    color: #fff;
+}
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.beta::after {
+    content: " beta";
+    font-style: italic;
+    color: #888;
+    cursor: help;
+}
+@media print {
+    .fc-row td {border-bottom: none!important;border-top: none!important;}
+    .fc-content-skeleton table {border-top: solid 1px!important;border-collapse: collapse;}
+    .event-info.container {
+        min-width: auto!important;
+    }
+    a.fc-event {
+        text-decoration: none;
+        white-space: normal;
+    }
+    a.location-link {
+        display: none;
+    }
+    a.event-attachment {
+        color: black;
+    }
+}
+@media only screen and (min-width: 993px) {
+    button.fc-changeView-button {
+        display: none;
+    }
+}
+@media only screen and (max-width: 992px) {
+    button.fc-print-button {
+        display: none;
+    }
+    .popover .arrow {
+        display: none;
+    }
+}
+.loading-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 2000;
+    text-align: center;
+}
+
+.loading-container .spinner-grow {
+    width: 50vh;
+    height: 50vh;
+    margin-top: 25vh;
+}
+@media only screen and (orientation: portrait) {
+    .loading-container .spinner-grow {
+        width: 50vw;
+        height: 50vw;
+        margin-top: 25vh;
+    }
+}
